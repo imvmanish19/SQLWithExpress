@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Person</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="">
+        <script src="http://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
+    </head>
+    <body>
+        <!--[if lt IE 7]>
+            <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+        <h1>Add Person Data</h1>
+        <form method="POST" action="/api">
+            <input id="name" type="text" placeholder="Name" name="name"><br><br>
+            <input id="age" type="number" placeholder="Age" name="age"><br><br>
+            <input id="place" type="text" placeholder="Place" name="place"><br><br>
+            <input id="submit" type="submit">
+        </form>
+        <h1>Person Data</h1>
+        <br>
+        <br>
+        <table id="persons" cellspacing="20" border="2" cellpadding="10" id="datatable">
+            <tr>
+                <th>Name</th>
+                <th>Age</th>
+                <th>Place</th>
+            </tr>
+            <tr>
+                <td>Sample Name</td>
+                <td>Sample Age</td>
+                <td>Sample City</td>
+             </tr>
+        </table>
+        <script src="script.js" async defer></script>
+    </body>
+</html>
