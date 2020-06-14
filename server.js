@@ -25,7 +25,13 @@ app.get('/add',(req,res) => {
 });
 
 app.post('/add',(req,res) => {
-
+    db.addPerson(req.body.name,req.body.age,req.body.place)
+    .then(() => {
+        res.redirect('/');
+    })
+    .catch(err => {
+        res.send(err);
+    })
 });
 
 app.listen(8000,() => {

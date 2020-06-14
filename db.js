@@ -19,13 +19,30 @@ function getAllPersons() {
                 }
                 else {
                     resolve(rows)
-                    connection.close();
                 }
             }
         )
     });
 }
 
+function addPerson(name,age,place) {
+    return new Promise((resolve,reject) => {
+        connection.query(`INSERT INTO person(name,age,place)
+        VALUES (?,?,?)`,
+        [name,age,place],
+        (err,results) => {
+            if(err) {
+                reject(err);
+            }
+            else
+            {
+                resolve();
+            }
+        })
+    })
+}
+
 exports = module.exports = {
-    getAllPersons
+    getAllPersons,
+    addPerson
 }
