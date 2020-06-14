@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Person</title>
+        <meta charset="UTF-8">
+        <meta name="description" content="Free Web tutorials">
+        <meta name="keywords" content="HTML, CSS, JavaScript">
+        <meta name="author" content="John Doe">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+       <h1>Person Data</h1>
+       <a href="/add">Add Data</a>
+       <br>
+       <br>
+       <table cellspacing="20" border="2" cellpadding="10" id="datatable">
+            <tr>
+                <th>Name</th>
+                <th>Age</th>
+                <th>Place</th>
+            </tr>
+            {{#each persons as |person|}}
+                <tr>
+                    <td>{{person.name}}</td>
+                    <td>{{person.age}}</td>
+                    <td>{{person.place}}</td>
+                </tr>
+            {{/each}}
+</html>
